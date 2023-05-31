@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Challenge Encriptador</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" alt="logo de alura" src="/Imagenes/Logo.png" />
+    </header>
+    <main>
+      <div class="div-principal">
+        <section class="caja-principal">
+          <textarea
+            class="texto-entrada"
+            id="texto"
+            cols="30"
+            rows="10"
+            placeholder="Ingrese el texto aqui"
+          ></textarea>
+  
+          <h6 class="informacion">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-alert-circle-filled"
+              width="20"
+              height="10"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M12 2c5.523 0 10 4.477 10 10a10 10 0 0 1 -19.995 .324l-.005 -.324l.004 -.28c.148 -5.393 4.566 -9.72 9.996 -9.72zm.01 13l-.127 .007a1 1 0 0 0 0 1.986l.117 .007l.127 -.007a1 1 0 0 0 0 -1.986l-.117 -.007zm-.01 -8a1 1 0 0 0 -.993 .883l-.007 .117v4l.007 .117a1 1 0 0 0 1.986 0l.007 -.117v-4l-.007 -.117a1 1 0 0 0 -.993 -.883z"
+                stroke-width="0"
+                fill="currentColor"
+              ></path></svg
+            >Solo letras minusculas sin acentos
+          </h6>
+          <button class="BotonEncriptar" id="btnEncriptar">Encriptar</button>
+          <button class="BotonDesencriptar" id="btnDesencriptar">
+            Desencriptar
+          </button>
+        </section>
+  
+        <section class="caja-respuesta">
+          <div class="cajas-muros" id="muro-oculto">
+            <textarea
+              class="texto-mensaje"
+              id="textoMensaje"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <button class="BotonCopiar" id="btnCopiar">Copiar</button>
+          </div>
+          <div class="cajas-muros" id="muro-revelado">
+            <img alt="Dibujo del muñeco Alura" src="/Imagenes/Muñeco.png" />
+            <h2>Ningún mensaje fue encontrado</h2>
+            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
