@@ -14,16 +14,18 @@ const btnEncriptar = document.getElementById("btnEncriptar");
 const btnDesencriptar = document.getElementById("btnDesencriptar");
 const btnCopiar = document.getElementById("btnCopiar");
 
-document.getElementById("muro-oculto").style.display = "none";
+document.getElementById("hidden-output").style.display = "none";
+
 function ocultarMuro() {
-  document.getElementById("muro-oculto").style.display = "block";
-  document.getElementById("muro-revelado").style.display = "none";
+  document.getElementById("hidden-output").style.display = "block";
+  document.getElementById("displayed-output").style.display = "none";
 }
 
 function ensenharMuro() {
-  document.getElementById("muro-revelado").style.display = "block";
-  document.getElementById("muro-oculto").style.display = "none";
+  document.getElementById("displayed-output").style.display = "block";
+  document.getElementById("hidden-output").style.display = "none";
 }
+
 
 function EncriptarTxt() {
   txtEncriptado = txtOriginal.value
@@ -53,7 +55,7 @@ function DesencriptarTxt() {
 
 btnCopiar.addEventListener("click", async () => {
   await navigator.clipboard.writeText(txtSalida.value);
-  ensenharMuro();
+  ensenharMuro()
 });
 
 btnEncriptar.addEventListener("click", EncriptarTxt);

@@ -1,104 +1,138 @@
-
-/* General */
 * {
   font-family: "Inter";
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 36px;
+}
+
+.input-content,
+.output-content {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.home {
+  width: 100%;
+  height: 100%;
   background-color: #f3f5fc;
+  background-size: cover;
+  background-position: center;
 }
 
-.logo {
-  padding: 10px;
-  margin: 10px;
-  width: 5%;
+.navbar {
+  width: 100%;
+  display: flex;
+  height: 9vh;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.div-principal {
+.content {
   display: flex;
 }
 
-/* CSS caja-principal */
-
-.caja-principal {
-  width: 50%;
+.input-content p {
+  margin: 8px 1em;
+  font-size: 12px;
+  opacity: 0.8;
+  color: #495057;
 }
 
-.texto-entrada {
-  width: 100%;
+.input-text,
+.output-text {
+  /* Position */
+  margin: 0.5em 0.5em 0px;
+  box-sizing: border-box;
+  width: 47vw;
+  height: 70vh;
+
+  /* Style */
   resize: none;
-  color: #0a3871;
   text-transform: lowercase;
-  font-size: 32px;
+  font-size: 24px;
   border: none;
   outline: none;
 }
 
-.informacion {
-  font-style: normal;
-  font-size: 12px;
-  color: #495057;
-  opacity: 0.8;
-  margin: 0px;
+.input-text {
+  color: #0a3871;
+  background-color: #f3f5fc;
 }
 
-.BotonEncriptar {
-  border: 1px solid #0a3871;
+.encrypt-button {
+  /* Button */
+  width: 328px;
+  height: 67px;
+  border: none;
+  margin-left: 0.5em;
   background-color: #0a3871;
   border-radius: 24px;
-  height: 67px;
-  width: 328px;
-  color: white;
-  cursor: pointer;
+  /* Text */
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
 }
 
-.BotonDesencriptar {
+.decrypt-button {
+  /* Button */
+  width: 328px;
+  height: 67px;
+  margin: 0px;
+  margin-right: 0.5em;
+  display: inline-block;
   border: 1px solid #0a3871;
-  background: #d8dfe8;
+  background-color: #f3f5fc;
   border-radius: 24px;
-  height: 67px;
-  width: 328px;
-  margin-left: 24px;
+  /* Text */
+  font-size: 16px;
+  font-weight: bold;
   color: #0a3871;
-  cursor: pointer;
 }
 
-/* CSS caja-respuesta */
-.caja-respuesta {
-  resize: none;
-  width: 50%;
+.displayed-output {
+  margin: 3.5em 0.5em 0px;
+  text-align: center;
 }
 
-.texto-mensaje {
-  width: 100%;
-  height: 100%;
-  border: none;
-  outline: none;
-  resize: none;
+.displayed-output h2 {
+  margin: 0.5em;
+  font-size: 24px;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.displayed-output span {
+  font-size: 16px;
+  color: #495057;
+}
+
+.output-text {
   color: #495057;
   background-color: #ffffff;
-  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
   border-radius: 24px;
 }
 
-.BotonCopiar {
-  border: 1px solid #0a3871;
-  border-radius: 24px;
+.copy-button {
+  /* Button */
+  display: block;
+  width: 328px;
   height: 67px;
-  width: 336px;
-  color: #0a3871;
-  cursor: pointer;
-}
-
-.cajas-muros {
-  text-align: center;
-  height: 83%;
-}
-
-.cajas-muros h2 {
+  margin: 28px auto;
+  border: 1px solid #0a3871;
+  background-color: #f3f5fc;
+  border-radius: 24px;
+  /* Text */
+  font-size: 16px;
   font-weight: bold;
+  color: #0a3871;
 }
 
-.cajas-muros img {
-  display: inline-block;
+.encrypt-button:hover,
+.decrypt-button:hover,
+.copy-button:hover {
+  font-size: 1.5em;
+  transition: 300ms;
 }
