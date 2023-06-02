@@ -26,7 +26,6 @@ function ensenharMuro() {
   document.getElementById("hidden-output").style.display = "none";
 }
 
-
 function EncriptarTxt() {
   txtEncriptado = txtOriginal.value
     .toLowerCase()
@@ -55,7 +54,8 @@ function DesencriptarTxt() {
 
 btnCopiar.addEventListener("click", async () => {
   await navigator.clipboard.writeText(txtSalida.value);
-  ensenharMuro()
+  txtOriginal.value = "";
+  ensenharMuro();
 });
 
 btnEncriptar.addEventListener("click", EncriptarTxt);
